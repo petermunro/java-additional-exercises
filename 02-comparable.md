@@ -25,7 +25,7 @@ The goal of this exercise is to help students understand the usage of the `Compa
 
 ---
 
-## Dailed Instructions
+## Detailed Instructions
 
 If you need a bit more help, you can follow these instructions.
 
