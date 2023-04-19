@@ -11,33 +11,39 @@ The goal of this exercise is to help you understand the usage of custom comparat
 3. Sort the `List` of `Book` objects by title using the custom title comparator and print the sorted list.
 4. Sort the `List` of `Book` objects by author using the custom author comparator and print the sorted list.
 
-## Instructions
+---
+
+## Derailed Instructions
+
+As before, you can follow these steps if you need more help.
 
 1. Create a custom comparator for sorting `Book` objects by title.
 
    ```java
-   Comparator<Book> titleComparator = new Comparator<Book>() {
-       @Override
-       public int compare(Book b1, Book b2) {
-           return b1.getTitle().compareToIgnoreCase(b2.getTitle());
-       }
-   };
+   public class TitleComparator implements Comparator<Book> {
+        @Override
+        public int compare(Book book1, Book book2) {
+            return book1.getTitle().compareTo(book2.getTitle());
+        }
+    }
    ```
 
 2. Create a custom comparator for sorting `Book` objects by author.
 
    ```java
-   Comparator<Book> authorComparator = new Comparator<Book>() {
-       @Override
-       public int compare(Book b1, Book b2) {
-           return b1.getAuthor().compareToIgnoreCase(b2.getAuthor());
-       }
-   };
+   public class AuthorComparator implements Comparator<Book> {
+        @Override
+        public int compare(Book book1, Book book2) {
+            return book1.getAuthor().compareTo(book2.getAuthor());
+        }
+    }
    ```
 
 3. Sort the `List` of `Book` objects by title using the custom title comparator and print the sorted list.
 
    ```java
+   Comparator<Book> titleComparator = new TitleComparator();
+
    Collections.sort(books, titleComparator);
 
    System.out.println("Sorted Books by Title:");
@@ -49,6 +55,8 @@ The goal of this exercise is to help you understand the usage of custom comparat
 4. Sort the `List` of `Book` objects by author using the custom author comparator and print the sorted list.
 
    ```java
+   Comparator<Book> authorComparator = new AuthorComparator();
+
    Collections.sort(books, authorComparator);
 
    System.out.println("\nSorted Books by Author:");
