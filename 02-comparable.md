@@ -7,7 +7,7 @@ The goal of this exercise is to help students understand the usage of the `Compa
 ## Requirements
 
 1. Create a Java class named `Book` that implements the `Comparable` interface.
-2. Add instance variables for `title`, `author`, and `publication` year to the `Book` class.
+2. Add instance variables for `title`, `author`, and `publicationyear` to the `Book` class.
 3. Create a constructor for the `Book` class that accepts the title, author, and publication year as arguments.
 4. Override the `compareTo` method in the `Book` class to compare books based on their publication year.
 5. Create a Java class named `BookSortingExercise` with a main method.
@@ -60,6 +60,15 @@ If you need a bit more help, you can follow these instructions.
    ```java
    @Override
    public int compareTo(Book other) {
+       return other.publicationYear - this.publicationYear;
+   }
+   ```
+
+   Another way of approaching this is:
+
+   ```java
+   @Override
+   public int compareTo(Book other) {
        return Integer.compare(this.publicationYear, other.publicationYear);
    }
    ```
@@ -80,7 +89,7 @@ If you need a bit more help, you can follow these instructions.
 6. In the main method, create an `ArrayList` of `Book` objects and add at least five `Book` instances.
 
    ```java
-   ArrayList<Book> books = new ArrayList<>();
+   List<Book> books = new ArrayList<>();
    books.add(new Book("The Catcher in the Rye", "J.D. Salinger", 1951));
    books.add(new Book("To Kill a Mockingbird", "Harper Lee", 1960));
    books.add(new Book("1984", "George Orwell", 1949));
