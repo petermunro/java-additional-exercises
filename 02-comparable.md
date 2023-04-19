@@ -23,7 +23,11 @@ The goal of this exercise is to help students understand the usage of the `Compa
 
 7. Sort the `ArrayList` of `Book` objects and print the sorted list.
 
-## Instructions
+---
+
+## Dailed Instructions
+
+If you need a bit more help, you can follow these instructions.
 
 1. Start by creating a new Java class named `Book` that implements the `Comparable` interface.
 
