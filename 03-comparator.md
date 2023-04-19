@@ -13,7 +13,7 @@ The goal of this exercise is to help you understand the usage of custom comparat
 
 ---
 
-## Derailed Instructions
+## Detailed Instructions
 
 As before, you can follow these steps if you need more help.
 
